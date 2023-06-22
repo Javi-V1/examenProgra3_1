@@ -123,5 +123,47 @@ namespace Capa_Logica.Lista_Doble
             return tammano;            
         }
 
+        /// <summary>
+        /// Sume los nodos con valor par de izquierda a derecha y luego a esa
+        /// suma reste los nodos de con valor impar de derecha a izquierda
+        /// </summary>
+        /// <returns></returns>
+        public double Sume_Izquierda_Pares_Reste_Derecha_Impares()
+        {
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Busque el valor del primer parametro en la lista y verifique si el nodo anterior
+        /// posee el valor del segundo parametro
+        /// </summary>
+        /// <param name="_valorBuscado"></param>
+        /// <param name="_valorAnterior"></param>
+        /// <returns></returns>
+        public bool Verifique_Nodo_Anterior_Con_Valor(int _valorBuscado,int _valorAnterior) {
+
+            return false;
+        }
+
+        /// <summary>
+        /// Busque el nodo con el primer parametro y luego agrege un nodo despues de
+        /// ese nodo con el valor del segundo parametro
+        /// </summary>
+        /// <param name="_valorBuscado"></param>
+        /// <param name="_valorNodo"></param>
+        public void Agregue_Nodo_Despues_De_Valor(int _valorBuscado, int _valorNodo)
+        {
+
+
+        }
+        /// <summary>
+        /// Elimine un nodo según el valor
+        /// </summary>
+        /// <param name="_valorEliminar"></param>
+        public void Elimine_Nodo_Segun_Valor(int _valorEliminar)
+        {
+
+        }
     }
 }

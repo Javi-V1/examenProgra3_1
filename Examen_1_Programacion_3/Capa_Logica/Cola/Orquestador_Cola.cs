@@ -73,5 +73,40 @@ namespace Capa_Logica.Cola
                 Console.WriteLine("*-*-*-*Termina Cola*-*-*-*");
             }           
         }
+
+        /// <summary>
+        /// Desencole los nodos con valor par
+        /// </summary>
+        public void Dequeue_Pares() { 
+        
+        
+        }
+
+        /// <summary>
+        /// Encole una cola
+        /// </summary>
+        public void Enqueue_Queue() { 
+        
+        
+        }
+
+        /// <summary>
+        /// Busque si el valor proporcionado existe
+        /// </summary>
+        /// <returns></returns>
+        public bool Busque_Valor_En_Cola(int _valor) {
+
+            return false;
+        }
+
+        /// <summary>
+        /// Desencole la mitad de los elementos de la cola, si el número en impar,
+        /// redondee hacia el número menor
+        /// </summary>
+        public void Dequeue_Mitad_Elementos() { 
+        
+        
+        }
+
     }
 }

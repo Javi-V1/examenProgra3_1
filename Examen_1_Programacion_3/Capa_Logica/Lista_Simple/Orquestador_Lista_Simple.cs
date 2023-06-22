@@ -57,7 +57,41 @@ namespace Capa_Logica.Lista_Simple
                 }               
             }
             Console.WriteLine("*-*-*-*Termina Lista*-*-*-*");
-        } 
-        
+        }
+
+        /// <summary>
+        /// Debe buscar el elemento máximo de la lista y retornarlo
+        /// </summary>
+        /// <returns></returns>
+        public int Busque_Numero_Maximo_Lista() {
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Debe buscar el elemento mínimo de la lista y retornarlo
+        /// </summary>
+        /// <returns></returns>
+        public int Busque_Numero_Minimo_Lista() {
+            return 0;
+        }
+
+        /// <summary>
+        /// Debe sumar todos los elementos de la lista y retornarlos
+        /// </summary>
+        /// <returns></returns>
+        public int Sume_Elementos_Lista() { 
+            
+            return 0;        
+        }
+
+        /// <summary>
+        /// Verifique si todos los elementos de la lista son pares
+        /// </summary>
+        /// <returns></returns>
+        public bool Verifique_Todos_Elementos_Pares() {
+
+            return false;
+        }        
     }
 }
