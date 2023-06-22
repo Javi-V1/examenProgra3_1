@@ -8,7 +8,7 @@ namespace Capa_Logica.Lista_Doble
         private NodoInt_LD final;
         private int tammano = 0;
 
-        public bool Cabeza_No_Nula()
+        private bool Cabeza_No_Nula()
         {
 
             return cabeza != null ? true : false;

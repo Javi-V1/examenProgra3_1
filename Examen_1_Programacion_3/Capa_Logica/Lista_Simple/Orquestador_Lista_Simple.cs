@@ -7,7 +7,7 @@ namespace Capa_Logica.Lista_Simple
 
         private NodoInt_LS cabeza;
 
-        public bool Cabeza_No_Nula()
+        private bool Cabeza_No_Nula()
         {
 
             if (cabeza != null)
@@ -57,7 +57,7 @@ namespace Capa_Logica.Lista_Simple
                 }               
             }
             Console.WriteLine("*-*-*-*Termina Lista*-*-*-*");
-        }
-
+        } 
+        
     }
 }
