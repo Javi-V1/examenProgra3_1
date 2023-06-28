@@ -65,7 +65,23 @@ namespace Capa_Logica.Lista_Simple
         /// <returns></returns>
         public int Busque_Numero_Maximo_Lista() {
 
-            return 0;
+            int maximo = 0; 
+            if (Cabeza_No_Nula())
+            {
+                NodoInt_LS nodoActual = cabeza;
+                maximo = nodoActual.Valor;
+
+                while (nodoActual != null) {
+
+                    if (nodoActual.Valor>maximo)
+                    {
+                        maximo = nodoActual.Valor; 
+                    }
+
+                    nodoActual= nodoActual.Siguiente;
+                }
+            }
+            return maximo;
         }
 
         /// <summary>
@@ -73,16 +89,46 @@ namespace Capa_Logica.Lista_Simple
         /// </summary>
         /// <returns></returns>
         public int Busque_Numero_Minimo_Lista() {
-            return 0;
+
+            int minimo = 0;
+            if (Cabeza_No_Nula())
+            {
+                NodoInt_LS nodoActual = cabeza;
+                minimo = nodoActual.Valor;
+
+                while (nodoActual != null)
+                {
+
+                    if (nodoActual.Valor < minimo)
+                    {
+                        minimo = nodoActual.Valor;
+                    }
+
+                    nodoActual = nodoActual.Siguiente;
+                }
+            }
+            return minimo;
         }
 
         /// <summary>
         /// Debe sumar todos los elementos de la lista y retornarlos
         /// </summary>
         /// <returns></returns>
-        public int Sume_Elementos_Lista() { 
-            
-            return 0;        
+        public int Sume_Elementos_Lista() {
+
+            int suma = 0;
+            if (Cabeza_No_Nula())
+            {
+                NodoInt_LS nodoActual = cabeza;
+
+                while (nodoActual != null)
+                {
+                    suma = suma+nodoActual.Valor;
+                    nodoActual = nodoActual.Siguiente;
+                }
+            }
+
+            return suma;        
         }
 
         /// <summary>
@@ -91,7 +137,22 @@ namespace Capa_Logica.Lista_Simple
         /// <returns></returns>
         public bool Verifique_Todos_Elementos_Pares() {
 
-            return false;
+            bool todosPares = true;
+
+            if (Cabeza_No_Nula())
+            {
+                NodoInt_LS nodoActual = cabeza;
+
+                while (nodoActual != null)
+                {
+                    if (nodoActual.Valor%2!=0)
+                    {
+                        todosPares = false;
+                    }
+                    nodoActual = nodoActual.Siguiente;
+                }
+            }
+            return todosPares;
         }        
     }
 }
