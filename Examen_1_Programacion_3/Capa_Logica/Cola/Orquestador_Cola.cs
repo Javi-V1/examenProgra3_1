@@ -156,5 +156,23 @@ namespace Capa_Logica.Cola
                 Dequeue();
             }
         }
+
+        public void Suma_Elementos()
+        {
+            int suma = 0;
+            int count = length;
+            if (Cabeza_No_Nula())
+            {
+                NodoInt_Cola nodoActual = cabeza;
+                while (count!=0)
+                {
+                    nodoActual = cabeza;
+                    suma +=  nodoActual.Valor;
+                    Enqueue(Dequeue().Valor);
+                    count--;
+                }
+            }
+            Console.WriteLine(suma);
+        }
     }
 }

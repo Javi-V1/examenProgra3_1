@@ -6,6 +6,7 @@ namespace Capa_Logica.Lista_Simple
     {
 
         private NodoInt_LS cabeza;
+        private int length=0;
 
         private bool Cabeza_No_Nula()
         {
@@ -27,6 +28,7 @@ namespace Capa_Logica.Lista_Simple
             if (!Cabeza_No_Nula())
             {
                 cabeza = nodoNuevo;
+                length++;
             }
             else
             {
@@ -36,7 +38,7 @@ namespace Capa_Logica.Lista_Simple
                 {
                     nodoActual = nodoActual.Siguiente;
                 }
-
+                length++;
                 nodoActual.Siguiente = nodoNuevo;
             }
         }
@@ -153,6 +155,65 @@ namespace Capa_Logica.Lista_Simple
                 }
             }
             return todosPares;
-        }        
+        }
+
+        public double valorRef_Promedio(int _valorRef)
+        {
+            double promedio=0;
+            double sumaElem=0;
+            int count=0;
+            if (Cabeza_No_Nula())
+            {
+                NodoInt_LS nodoActual = cabeza;
+
+                while (nodoActual != null)
+                {
+                    if (_valorRef <= nodoActual.Valor)
+                    {
+                        sumaElem += nodoActual.Valor;
+                        count++;
+                    }
+                    nodoActual = nodoActual.Siguiente;
+                }
+                promedio = sumaElem / count;
+            }
+            return promedio;
+        }
+
+        public void Eliminar_Varios_nodos(int _valornodo, int _cantNodos)
+        {
+            Eliminar_recursivo(_valornodo, _cantNodos);
+        }
+
+        public void Eliminar_recursivo(int _valornodo, int _cantNodos)
+        {
+            NodoInt_LS nodoActual =cabeza;
+            if (_cantNodos == 0)
+            {
+
+            }
+            else
+            {
+                while (nodoActual.Valor != _valornodo)
+                {
+                    nodoActual = nodoActual.Siguiente;
+                }
+                if (nodoActual.Siguiente.Siguiente == null)
+                {
+                    nodoActual.Siguiente = null;
+                }
+                else
+                {
+                    NodoInt_LS aux = nodoActual.Siguiente;
+                    nodoActual.Siguiente = aux.Siguiente;
+                    aux.Siguiente = null;
+                    aux = null;
+
+                    _cantNodos--;
+                    Eliminar_recursivo(_valornodo, _cantNodos);
+                }
+            }
+        }
+
     }
 }

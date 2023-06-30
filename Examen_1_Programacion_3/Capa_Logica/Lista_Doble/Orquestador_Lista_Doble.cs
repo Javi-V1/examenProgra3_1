@@ -1,4 +1,6 @@
 ﻿using Capa_Modelo.LD;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 namespace Capa_Logica.Lista_Doble
 {
@@ -262,6 +264,31 @@ namespace Capa_Logica.Lista_Doble
                 }
             }
 
+        }
+
+        public void Intercambio_valor()
+        {
+            int segundo = 0;
+            int penultimo = 0;
+
+            if(Cabeza_No_Nula() )
+            {
+                NodoInt_LD nodoActual = cabeza;
+                nodoActual = nodoActual.Siguiente;
+                segundo = nodoActual.Valor;
+
+                nodoActual = final;
+                nodoActual = nodoActual.Anterior;
+                penultimo = nodoActual.Valor;
+
+                nodoActual = cabeza;
+                nodoActual = nodoActual.Siguiente;
+                nodoActual.Valor = penultimo;
+
+                nodoActual = final;
+                nodoActual = nodoActual.Anterior;
+                nodoActual.Valor = segundo;
+            }
         }
     }
 }
